@@ -31,9 +31,9 @@ identity_admin_endpoint = admin_endpoint 'identity-admin'
 token = get_secret 'openstack_identity_bootstrap_token'
 auth_url = ::URI.decode identity_admin_endpoint.to_s
 
-api_internal_endpoint = internal_endpoint 'image-api'
+api_internal_endpoint = internal_endpoint 'image-internal'
 api_public_endpoint = public_endpoint 'image-api'
-api_admin_endpoint = admin_endpoint 'image-api'
+api_admin_endpoint = admin_endpoint 'image-admin'
 
 service_pass = get_password 'service', 'openstack-image'
 service_tenant_name = node['openstack']['image']['service_tenant_name']
